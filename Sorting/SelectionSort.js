@@ -12,9 +12,12 @@ function selectionSort(arr) {
         min = j;
       }
     }
-    let temp = arr[i];
-    arr[i] = arr[min];
-    arr[min] = temp;
+    // only swap if i is not min
+    if (i !== min) {
+      let temp = arr[i];
+      arr[i] = arr[min];
+      arr[min] = temp;
+    }
   }
   return arr;
 }
